@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Generate a printable password card with secure random characters.">
-  <title>Password Card Generator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate a printable password card with secure random characters.">
+    <title>Password Card Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="page">
-    <header class="intro">
-      <h1>Password Card</h1>
-      <p>
-        Generate a card full of random characters, print it and keep it in your wallet.
-        Choose a start field and a path, for example <strong>start at C5 and go 8 fields to the right</strong>,
-        and you have a strong password without having to remember it.
-      </p>
-    </header>
+    <main class="page">
+        <header class="intro">
+            <h1>Password Card</h1>
+            <p>
+                Generate a card full of random characters, print it and keep it in your wallet.
+                Choose a start field and a path, for example <strong>start at C5 and go 8 fields to the right</strong>,
+                and you have a strong password without having to remember it.
+            </p>
+        </header>
 
-    <form id="settings" class="settings">
-      <label>
-        Card width(A to..)
-        <select id="columns"></select>
-      </label>
-      <label>
-        Card height(rows)
-        <input id="rows" type="number" min="1" max="25" value="10">
-      </label>
-      <button type="submit">Generate new card</button>
-      <button type="button" id="print" class="secondary">Print</button>
-    </form>
+        <form id="settings" class="settings">
+            <label>
+                Card width (A to …)
+                <select id="columns"></select>
+            </label>
+            <label>
+                Card height (rows)
+                <input id="rows" type="number" min="1" max="25" value="10">
+            </label>
+            <button type="submit">Generate new card</button>
+            <button type="button" id="print" class="secondary">Print</button>
+        </form>
 
-    <section class="card-wrapper">
-      <table id="card" class="card"></table>
-    </section>
+        <section class="card-wrapper">
+            <table id="card" class="card"></table>
+        </section>
 
-    <p class="note">
-      The characters are created in your browser with <code>crypto.getRandomValues</code>.
-      Nothing is sent to a server.
-    </p>
-  </main>
+        <p class="note">
+            The characters are created in your browser with <code>crypto.getRandomValues</code>.
+            Nothing is sent to a server.
+        </p>
 
-  <script src="script.js"></script>
+        <footer class="footer">
+            Made by <a href="https://github.com/yavar-rassuli">Yavar Rassuli</a> ·
+            <a href="https://github.com/yavar-rassuli/password-card-generator">Source code</a>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
